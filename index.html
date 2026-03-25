@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>レオ & にとの誕生日運動会</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1a7a4a;--green-l:#e8f5ee;--green-m:#2d9e65;--amber:#c97a12;--amber-l:#fef3e2;--blue:#1a5fa8;--blue-l:#e8f0fb;--purple:#6b3fa0;--purple-l:#f3edfb;--gray:#6b7280;--gray-l:#f4f4f2;--border:#e5e7eb;--text:#111827;--muted:#6b7280;--bg:#fafaf8;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+.hero{background:#0f3d24;color:#fff;padding:40px 24px 32px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.02) 40px,rgba(255,255,255,.02) 80px);}
+.hbadges{display:flex;justify-content:center;gap:8px;margin-bottom:16px;flex-wrap:wrap;position:relative;}
+.badge{font-size:11px;font-weight:700;padding:4px 12px;border-radius:99px;letter-spacing:.06em;text-transform:uppercase;}
+.bg{background:#f59e0b;color:#451a00;}
+.bw{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2);}
+.htitle{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,6vw,36px);font-weight:700;line-height:1.2;margin-bottom:6px;position:relative;}
+.hsub{font-size:13px;color:rgba(255,255,255,.65);position:relative;}
+.stats{display:flex;background:#fff;border-bottom:1px solid var(--border);overflow-x:auto;}
+.stat{flex:1;min-width:70px;padding:14px 8px;text-align:center;border-right:1px solid var(--border);}
+.stat:last-child{border-right:none;}
+.sv{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--green);line-height:1;margin-bottom:3px;}
+.sl{font-size:10px;color:var(--muted);}
+.rules-bar{background:var(--green-l);border-bottom:1px solid #c3e8d4;padding:10px 20px;font-size:12px;color:#0f5c30;display:flex;gap:16px;flex-wrap:wrap;}
+.rules-bar span{display:flex;align-items:center;gap:5px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green-m);flex-shrink:0;}
+.container{max-width:680px;margin:0 auto;padding:0 16px 48px;}
+.slabel{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:20px 0 10px;}
+.blk{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);}
+.blk:last-child{border-bottom:none;}
+.tc{width:52px;flex-shrink:0;}
+.tm{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;}
+.td{font-size:10px;color:var(--muted);margin-top:1px;}
+.ac{width:3px;flex-shrink:0;border-radius:2px;margin-top:3px;}
+.ag{background:#d1d5db;}.ab{background:#378ADD;}.agr{background:var(--green-m);}.aa{background:#f59e0b;}.ap{background:#8b5cf6;}
+.bc{flex:1;min-width:0;}
+.ptag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;display:inline-block;margin-bottom:6px;letter-spacing:.04em;}
+.pb{background:var(--blue-l);color:var(--blue);}
+.pg{background:var(--green-l);color:var(--green);}
+.pa{background:var(--amber-l);color:var(--amber);}
+.pp{background:var(--purple-l);color:var(--purple);}
+.pgr{background:var(--gray-l);color:var(--gray);}
+.bt{font-size:14px;font-weight:700;margin-bottom:5px;}
+.bn{font-size:12px;color:var(--muted);line-height:1.65;}
+.ibox{background:var(--gray-l);border-radius:8px;padding:10px 12px;font-size:12px;color:#374151;line-height:1.7;margin-top:8px;}
+.ibox strong{font-weight:700;color:var(--text);}
+.evlist{margin-top:10px;display:flex;flex-direction:column;gap:6px;}
+.ev{border:1px solid var(--border);border-radius:10px;padding:10px 12px;background:#fff;}
+.evh{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+.evn{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:var(--muted);width:20px;flex-shrink:0;}
+.evname{font-size:13px;font-weight:700;flex:1;}
+.evb{font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap;}
+.et{background:var(--green-l);color:var(--green);}
+.es{background:var(--amber-l);color:var(--amber);}
+.evbody{font-size:11px;color:var(--muted);line-height:1.65;padding-left:28px;}
+.evbody li{list-style:none;position:relative;padding-left:12px;}
+.evbody li::before{content:'–';position:absolute;left:0;color:#d1d5db;}
+.div{margin:4px 0 4px 60px;display:flex;align-items:center;gap:8px;font-size:10px;color:#9ca3af;}
+.div::after{content:'';flex:1;height:1px;background:var(--border);}
+.fbox{background:#0f3d24;color:#fff;border-radius:12px;padding:16px 18px;margin-top:20px;font-size:12px;line-height:1.8;}
+.fbox .ft{font-size:13px;font-weight:700;margin-bottom:6px;color:#86efac;}
+.footer{text-align:center;padding:24px;font-size:11px;color:#9ca3af;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hbadges">
+    <span class="badge bg">Birthday Party</span>
+    <span class="badge bw">TYBASE 厚木</span>
+    <span class="badge bw">体育館 〜22:00</span>
+  </div>
+  <div class="htitle">レオ &amp; にとの誕生日運動会</div>
+  <div class="hsub">全10種目 ／ 勝ち点制</div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="sv">12</div><div class="sl">参加人数</div></div>
+  <div class="stat"><div class="sv">6v6</div><div class="sl">チーム編成</div></div>
+  <div class="stat"><div class="sv">10</div><div class="sl">総種目数</div></div>
+  <div class="stat"><div class="sv">3</div><div class="sl">個人戦（★）</div></div>
+  <div class="stat"><div class="sv">10</div><div class="sl">最大勝ち点</div></div>
+</div>
+
+<div class="rules-bar">
+  <span><span class="dot"></span>団体戦は6人全員参加</span>
+  <span><span class="dot"></span>個人戦は選出メンバーが出場・全員が必ず1種目出る</span>
+  <span><span class="dot"></span>勝ったら勝ち点1pt</span>
+</div>
+
+<div class="container">
+<div class="slabel">タイムライン</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">17:00</div><div class="td">30分</div></div>
+  <div class="ac ag"></div>
+  <div class="bc">
+    <span class="ptag pgr">準備</span>
+    <div class="bt">集合・設営・準備運動</div>
+    <div class="bn">着替え・準備運動 ／ 軽食コーナー設営（パン・おにぎり・飲み物）<br>バレーの準備を先にしておく</div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">17:30</div><div class="td">15分</div></div>
+  <div class="ac ab"></div>
+  <div class="bc">
+    <span class="ptag pb">開会式</span>
+    <div class="bt">ルール説明 &amp; ドラフト</div>
+    <div class="ibox">
+      <strong>ドラフト手順</strong><br>
+      ① ルール全体説明（勝ち点制・団体戦と個人戦の違い）<br>
+      ② じゃんけんで先攻決定 → レオ・にとが交互に指名 × 5巡<br>
+      ③ 個人戦3種目（★）に出る選手をチームで事前相談。全員1種目以上出場
+    </div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">17:45</div><div class="td">約90分</div></div>
+  <div class="ac agr"></div>
+  <div class="bc">
+    <span class="ptag pg">前半戦 — 5種目</span>
+    <div class="bt">運動会スタート</div>
+    <div class="evlist">
+
+      <div class="ev">
+        <div class="evh"><span class="evn">①</span><span class="evname">バレーボール</span><span class="evb et">団体戦</span></div>
+        <ul class="evbody">
+          <li>5分 × 2セット制、セット数が多い方が勝ち</li>
+          <li>1–1になった場合 → 延長3分1セット</li>
+          <li>6人全員参加</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev">
+        <div class="evh"><span class="evn">②</span><span class="evname">フットサル</span><span class="evb et">団体戦</span></div>
+        <ul class="evbody">
+          <li>前後半 各3分（計6分）、得点多い方が勝ち</li>
+          <li>同点 → PK戦：各チーム1人ずつ交互にシュート</li>
+          <li>GKはチームで固定。6人全員参加</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev">
+        <div class="evh"><span class="evn">③</span><span class="evname">綱引き</span><span class="evb et">団体戦</span></div>
+        <ul class="evbody">
+          <li>Bo3（2本先取）、10分以内に完了見込み</li>
+          <li>6人全員参加</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev">
+        <div class="evh"><span class="evn">④</span><span class="evname">★ バドミントン</span><span class="evb es">個人戦</span></div>
+        <ul class="evbody">
+          <li>各チームから2名選出（ダブルス）で対戦</li>
+          <li>7点先取 Bo3（2本先取）、デュースあり</li>
+          <li>勝ったチームに勝ち点1。他4名は応援</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev">
+        <div class="evh"><span class="evn">⑤</span><span class="evname">★ ツイスター</span><span class="evb es">個人戦</span></div>
+        <ul class="evbody">
+          <li>各チームから2名選出。同じシートで同時対戦</li>
+          <li>ルーレットの指示通りに手足を置く。先に倒れた方（膝or肘がついた方）が負け</li>
+          <li>Bo3。観客がルーレットをどんどん回すと盛り上がる</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">〜19:15</div><div class="td">15分</div></div>
+  <div class="ac aa"></div>
+  <div class="bc">
+    <span class="ptag pa">休憩①</span>
+    <div class="bt">ハーフタイム・中間スコア発表</div>
+    <div class="bn">水分補給・軽食 ／ 前半の勝ち点を発表して盛り上げる。後半の作戦タイムも兼ねる</div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">〜19:30</div><div class="td">約35分</div></div>
+  <div class="ac agr"></div>
+  <div class="bc">
+    <span class="ptag pg">後半戦前半 — 2種目</span>
+    <div class="bt">後半スタート</div>
+    <div class="evlist">
+
+      <div class="ev">
+        <div class="evh"><span class="evn">⑥</span><span class="evname">バスケットボール</span><span class="evb et">団体戦</span></div>
+        <ul class="evbody">
+          <li>前後半 各3分（計6分）、得点多い方が勝ち</li>
+          <li>同点 → フリースロー：各チーム1人ずつ交互に投射</li>
+          <li>6人全員参加</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev">
+        <div class="evh"><span class="evn">⑦</span><span class="evname">座布団キャタピラリレー</span><span class="evb et">団体戦</span></div>
+        <ul class="evbody">
+          <li>座布団に乗ってキャタピラのように進むリレー</li>
+          <li>全員ゴールした時間で勝敗決定。10分以内に完了見込み</li>
+          <li>6人全員参加</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">〜20:15</div><div class="td">15分</div></div>
+  <div class="ac aa"></div>
+  <div class="bc">
+    <span class="ptag pa">休憩②</span>
+    <div class="bt">小休憩・スコア確認</div>
+    <div class="bn">水分補給 ／ 残り3種目・現在のスコアを発表</div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">〜20:30</div><div class="td">約40分</div></div>
+  <div class="ac agr"></div>
+  <div class="bc">
+    <span class="ptag pg">後半戦後半 — 3種目（大詰め）</span>
+    <div class="bt">クライマックスへ</div>
+    <div class="evlist">
+
+      <div class="ev">
+        <div class="evh"><span class="evn">⑧</span><span class="evname">玉入れ</span><span class="evb et">団体戦</span></div>
+        <ul class="evbody">
+          <li>制限時間内（5〜8分）に多く入れた方が勝ち</li>
+          <li>6人全員参加</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev">
+        <div class="evh"><span class="evn">⑨</span><span class="evname">★ 騎馬戦</span><span class="evb es">個人戦</span></div>
+        <ul class="evbody">
+          <li>各チームから4人参加（上：レオ or にと、下：3人）</li>
+          <li>相手のハチマキを取ったら勝ち。Bo3（2本先取）</li>
+          <li>ハンデ：レオは片手のみでハチマキを守る</li>
+          <li>出場しない2名は応援・審判</li>
+        </ul>
+      </div>
+
+      <div class="div">準備 5分</div>
+
+      <div class="ev" style="border-color:#1a7a4a;border-width:2px;">
+        <div class="evh"><span class="evn">⑩</span><span class="evname" style="color:#1a7a4a;">ドッジボール</span><span class="evb et">団体戦 — 大トリ</span></div>
+        <ul class="evbody">
+          <li>15分。最後まで生き残った人数が多いチームが勝ち</li>
+          <li>アウト後は外野から参加できるルールにすると盛り上がる</li>
+          <li>6人全員参加</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">〜21:00</div><div class="td">15分</div></div>
+  <div class="ac aa"></div>
+  <div class="bc">
+    <span class="ptag pa">休憩③ &amp; 閉会式</span>
+    <div class="bt">結果発表・表彰</div>
+    <div class="bn">最終勝ち点を集計 → 優勝チーム発表<br>レオ・にとへのバースデーサプライズ（みんなで一言など）</div>
+  </div>
+</div>
+
+<div class="blk">
+  <div class="tc"><div class="tm">〜21:15</div><div class="td">〜22:00</div></div>
+  <div class="ac ap"></div>
+  <div class="bc">
+    <span class="ptag pp">フリータイム</span>
+    <div class="bt">自由に遊ぶ 〜 22:00</div>
+    <div class="bn">好きな種目のリプレイ・球技など自由に ／ 軽食の残りもどうぞ</div>
+  </div>
+</div>
+
+<div class="fbox">
+  <div class="ft">勝ち点まとめ</div>
+  <div style="color:rgba(255,255,255,.8);font-size:12px;line-height:1.8;">
+    団体戦 7種目（バレー・フットサル・綱引き・バスケ・座布団リレー・玉入れ・ドッジボール）<br>
+    個人戦 3種目（★バドミントン・★ツイスター・★騎馬戦）← 全員が必ず1種目出場<br>
+    <span style="color:rgba(255,255,255,.5);font-size:11px;">得点係を1名決めておくとスムーズ ／ 時刻はすべて目安</span>
+  </div>
+</div>
+
+</div>
+<div class="footer">レオ &amp; にとの誕生日運動会 ／ TYBASE 厚木</div>
+</body>
+</html>
